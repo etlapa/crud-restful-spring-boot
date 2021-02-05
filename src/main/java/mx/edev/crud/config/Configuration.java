@@ -14,9 +14,9 @@ public class Configuration {
     private static final int MAX_ITEMS = 10;
 
     @Bean
-    CommandLineRunner initDatabase(ProductRepository repository) {
+    public CommandLineRunner initDatabase(ProductRepository repository) {
         return args -> {
-            for(int i=1;i<=MAX_ITEMS;i++) {
+            for (int i = 1; i <= MAX_ITEMS; i++) {
                 LOGGER.info("Preloading " + repository.save(new Product("Product " + i, "Product's description " + i, true)));
             }
         };

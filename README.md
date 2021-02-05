@@ -21,3 +21,7 @@ Step 6 - Catching exceptions. If the product ID is not found, a 500 error is ret
 	This an unchecked exception that can be customized by extending RuntimeException: ProductNotFoundException
 Step 7 - Customizing response. It returns a custom error messsage with the status code 404
 Step 8 - Returning customized JSON response.
+Step 9 - Solving the CORS issue for local testing purposes. More details:
+	https://enable-cors.org/
+	https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin
+	
