@@ -6,8 +6,11 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+//Lombok annotation that automatically adds the setters & getters for all attributes in the class
+@Data
+@Entity
 public class Product {
-    private Long id;
+    private @Id @GeneratedValue Long id;
     private String name;
     private String description;
     private boolean available;
