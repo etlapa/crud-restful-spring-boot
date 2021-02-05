@@ -14,3 +14,4 @@ Step 2 - Add domain object: Product.
 	Additionally the library Lombok was added in order to use annotations instead of manual setters and getters. More info at:
 	https://projectlombok.org/
 Step 3 - Adding JPA annotations and repository
+Step 4 - DataBase loading
