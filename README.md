@@ -15,3 +15,4 @@ Step 2 - Add domain object: Product.
 	https://projectlombok.org/
 Step 3 - Adding JPA annotations and repository
 Step 4 - DataBase loading
+Step 5 - Adding the product controller (services exposure)
