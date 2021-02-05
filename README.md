@@ -16,3 +16,6 @@ Step 2 - Add domain object: Product.
 Step 3 - Adding JPA annotations and repository
 Step 4 - DataBase loading
 Step 5 - Adding the product controller (services exposure)
+Step 6 - Catching exceptions. If the product ID is not found, a 500 error is return, but in the following exception is never handled:
+	java.util.NoSuchElementException: No value present
+	This an unchecked exception that can be customized by extending RuntimeException: ProductNotFoundException 

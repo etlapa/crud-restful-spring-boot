@@ -2,6 +2,7 @@ package mx.edev.crud.controllers;
 
 import mx.edev.crud.config.Configuration;
 import mx.edev.crud.domain.Product;
+import mx.edev.crud.exceptions.ProductNotFoundException;
 import mx.edev.crud.repositories.ProductRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -33,7 +34,9 @@ public class ProductController {
     // Single item
     @GetMapping("/products/{id}")
     public Product getOne(@PathVariable Long id) {
-        return productRepository.findById(id).get();
+        return productRepository.findById(id).orElseThrow(
+                ()->new ProductNotFoundException(id)
+        );
     }
 
     @PutMapping("/products/{id}")
