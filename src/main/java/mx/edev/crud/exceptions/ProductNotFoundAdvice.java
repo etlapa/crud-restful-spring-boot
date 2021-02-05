@@ -1,5 +1,6 @@
 package mx.edev.crud.exceptions;
 
+import mx.edev.crud.domain.CustomErrorResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -11,7 +12,7 @@ public class ProductNotFoundAdvice {
     @ResponseBody
     @ExceptionHandler(ProductNotFoundException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
-    String productNotFoundHandler(ProductNotFoundException ex) {
-        return ex.getMessage();
+    CustomErrorResponse productNotFoundHandler(ProductNotFoundException ex) {
+        return new CustomErrorResponse(HttpStatus.NOT_FOUND.toString(),ex.getMessage());
     }
 }

@@ -20,3 +20,4 @@ Step 6 - Catching exceptions. If the product ID is not found, a 500 error is ret
 	java.util.NoSuchElementException: No value present
 	This an unchecked exception that can be customized by extending RuntimeException: ProductNotFoundException
 Step 7 - Customizing response. It returns a custom error messsage with the status code 404
+Step 8 - Returning customized JSON response.
