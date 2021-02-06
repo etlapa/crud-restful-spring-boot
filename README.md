@@ -24,4 +24,15 @@ Step 8 - Returning customized JSON response.
 Step 9 - Solving the CORS issue for local testing purposes. More details:
 	https://enable-cors.org/
 	https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin
-	
+
+(Optional)
+Step 10 - Running service with docker.
+	run the command
+		./gradlew bootBuildImage --imageName=springio/crud-restful-docker
+	run the container
+		docker run -p 8081:8080 -t springio/crud-restful-docker
+	Where:
+		8081 can be replaced by any port available on the host
+		8080 is the port where the service is running 'inside' the container
+	More info:
+	https://spring.io/guides/gs/spring-boot-docker/	
